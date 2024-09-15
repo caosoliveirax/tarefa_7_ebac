@@ -17,15 +17,23 @@ form.addEventListener('submit', function(e) {
 function validaSaldo(saldoAtual, precoProduto) {
     const mensagemSucessoContainer = document.querySelector('.sucess-message')
     const mensagemErroContainer = document.querySelector('.error-message');
+    const inputSaldoAtual = document.getElementById ('saldo-atual')
+    const inputPrecoProduto = document.getElementById('preço-item')
+
     if (saldoAtual>= precoProduto) {
         // Se for um valor valido, exibe uma mensagem de sucesso
         const mensagemSucesso = `Você tem R$ ${saldoAtual.toFixed(2)} disponíveis e pode comprar o produto de R$ ${precoProduto.toFixed(2)}!`;
         // Insere a mensagem no container
         mensagemSucessoContainer.innerHTML = mensagemSucesso;
         mensagemSucessoContainer.style.display = 'block'
+
+        // Limpa os campos do formulario
+        inputSaldoAtual.value = '';
+        inputPrecoProduto.value = '';
+        
     } else {
         //Caso contrário, destacar o campo do saldo em vermelho e exibe mensagem de erro
-        mensagemErroContainer.style.border = '1px solid red'
+        inputSaldoAtual.style.border = '1px solid red'
         document.querySelector('.error-message').style.display = 'block';
     }
 }
