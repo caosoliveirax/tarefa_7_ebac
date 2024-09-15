@@ -69,4 +69,5 @@ button:hover {
     font-size: 12px;
     padding: 8px;
     margin-bottom: 8px;
+    display: none;
 }
