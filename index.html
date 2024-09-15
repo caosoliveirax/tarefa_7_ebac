@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preços</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Comparador De Preços</h1>
+        <form id="valores">
+            <input type="number" id="preço-item" required placeholder="Preço do produto">
+            <input type="number" id="saldo-atual" required placeholder="Saldo disponivel">
+            <p class="error-message">Valor abaixo do preço do produto.</p>
+            <button id="btn-comparar" type="submit">Verifique</button>
+        </form>
+        <p class="sucess-message">Ok! Você tem 0000 reais e pode comprar o item de 0000 reais, ainda sobrará 0000 reais!</p>
+    </div>
+    <script src="/main.js"></script>
+</body>
+</html>
